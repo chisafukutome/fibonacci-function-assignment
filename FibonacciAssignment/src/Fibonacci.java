@@ -10,15 +10,15 @@ public class Fibonacci {
 		long startTime, endTime, timeTook;
 		
 		//assign "nth"
-		long nth = 10;
+		long nth = 100;
 		
-		//recursive operation
-		System.out.println("[Recursive]");
-		startTime = System.nanoTime();	//count the start time
-		System.out.println(nth + "th term: " + fibonacciRec(nth));
-		endTime = System.nanoTime();	//count the end time
-		timeTook = endTime - startTime;
-		System.out.println("It took " + timeTook + " nanosecond\n");
+//		//recursive operation
+//		System.out.println("[Recursive]");
+//		startTime = System.nanoTime();	//count the start time
+//		System.out.println(nth + "th term: " + fibonacciRec(nth));
+//		endTime = System.nanoTime();	//count the end time
+//		timeTook = endTime - startTime;
+//		System.out.println("It took " + timeTook + " nanosecond\n");
 		
 		//iterative operation
 		System.out.println("[Iterative]");
@@ -34,7 +34,7 @@ public class Fibonacci {
 	
 	public static long fibonacciRec(long nth) {
 		if(nth == 0 || nth == 1) {
-			//fibonacci sequence "1, 1, 2, 3...", so the 1st and 2nd values are the same as nth.
+			//fibonacci sequence "0, 1, 1, 2, 3...", so the 0 and 1st values are the same as nth.
 			return nth;
 		}
 		
@@ -47,7 +47,7 @@ public class Fibonacci {
 		long firstNum = 1, secondNum = 0, result = 0;
 		
 		if(nth == 0 || nth == 1) {
-			//fibonacci sequence "1, 1, 2, 3...", so the 1st and 2nd values are the same as nth.
+			//fibonacci sequence "0, 1, 1, 2, 3...", so the 0 and 1st values are the same as nth.
 			return nth;
 		} else {
 			for(int i = 0; i < nth; i++) {
